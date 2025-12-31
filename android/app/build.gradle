@@ -17,7 +17,7 @@ if (localPropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 35
+    compileSdkVersion 36
     namespace("com.tencent.flutter.tuikit")
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
