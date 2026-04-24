@@ -18,7 +18,8 @@ if (localPropertiesFile.exists()) {
 
 android {
     compileSdkVersion 36
-    namespace("com.tencent.flutter.tuikit")
+    ndkVersion "28.2.13676358"
+    namespace("com.tencent.cloud.chat.flutter")
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -40,7 +41,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.tencent.qcloud.tim.tuikit"
+        applicationId "com.tencent.cloud.chat.flutter"
         minSdkVersion 24
         targetSdkVersion 33
         versionCode flutter.versionCode

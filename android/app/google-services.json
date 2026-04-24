@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:648596655528:android:982a4a39035201997fe19d",
         "android_client_info": {
-          "package_name": "com.tencent.qcloud.tim.tuikit"
+          "package_name": "com.tencent.cloud.chat.flutter"
         }
       },
       "oauth_client": [
@@ -34,7 +34,7 @@
               "client_id": "648596655528-6mjipjaa7gegcsfr88fhsdvjcdp5gb86.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.tencent.flutter.tuikit"
+                "bundle_id": "com.tencent.cloud.chat.flutter"
               }
             }
           ]

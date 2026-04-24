@@ -1,4 +1,4 @@
-package com.tencent.flutter.tuikit
+package com.tencent.cloud.chat.flutter.demo
 
 import io.flutter.embedding.android.FlutterActivity
 

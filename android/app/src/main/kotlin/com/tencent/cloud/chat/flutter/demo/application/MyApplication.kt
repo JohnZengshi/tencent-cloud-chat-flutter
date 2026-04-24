@@ -1,4 +1,4 @@
-package com.tencent.flutter.tuikit.application
+package com.tencent.cloud.chat.flutter.demo.application
 
 import com.tencent.chat.flutter.push.tencent_cloud_chat_push.application.TencentCloudChatPushApplication;
 

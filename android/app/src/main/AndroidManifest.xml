@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tencent.flutter.tuikit"
+    package="com.tencent.cloud.chat.flutter"
     xmlns:tools="http://schemas.android.com/tools"
     >
     <application
-        android:label="腾讯云IM"
+        android:label="Tencent Cloud Chat Flutter"
         android:name=".application.MyApplication"
         tools:replace="android:label"
         android:icon="@mipmap/logo"
@@ -45,7 +45,7 @@
               <category android:name="android.intent.category.BROWSABLE" />
               <!-- Accepts URIs that begin with YOUR_SCHEME://YOUR_HOST -->
               <data
-                android:scheme="uikitflutterdemo"
+                android:scheme="tencentcloudchatflutter"
                 android:host="dl"
               />
             </intent-filter>

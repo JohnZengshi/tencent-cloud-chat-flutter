@@ -2,7 +2,7 @@
 -keep class com.baidu.** {*;}
 -keep class vi.com.** {*;}
 -keep class com.baidu.vi.** {*;}
-#-keep class com.tencent.flutter.tuikit.** {*;}
+#-keep class com.tencent.cloud.chat.flutter.demo.** {*;}
 -dontwarn com.baidu.**
 #-ignorewarnings
 #-keepattributes *Annotation*
