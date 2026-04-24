@@ -53,3 +53,6 @@ local.properties
 
 # FVM Version Cache
 .fvm/
+
+# Vendored example build output
+vendor/tencent_cloud_chat_uikit/example/build/
