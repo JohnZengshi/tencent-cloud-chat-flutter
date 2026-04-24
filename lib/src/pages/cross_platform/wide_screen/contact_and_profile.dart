@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/contact.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/group_list.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/multi_platform_widget/search_entry/search_entry.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/multi_platform_widget/search_entry/search_entry_wide.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/pages/cross_platform/wide_screen/empty_widget.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/search.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/user_profile.dart';
+import 'package:tencent_cloud_chat_flutter/src/contact.dart';
+import 'package:tencent_cloud_chat_flutter/src/group_list.dart';
+import 'package:tencent_cloud_chat_flutter/src/multi_platform_widget/search_entry/search_entry.dart';
+import 'package:tencent_cloud_chat_flutter/src/multi_platform_widget/search_entry/search_entry_wide.dart';
+import 'package:tencent_cloud_chat_flutter/src/pages/cross_platform/wide_screen/empty_widget.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter/src/search.dart';
+import 'package:tencent_cloud_chat_flutter/src/user_profile.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_conversation.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_conversation.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_group_info.dart'

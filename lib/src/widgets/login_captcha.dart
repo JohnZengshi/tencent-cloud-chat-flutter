@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_flutter_demo/config.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/toast.dart';
+import 'package:tencent_cloud_chat_flutter/config.dart';
+import 'package:tencent_cloud_chat_flutter/utils/toast.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 enum CaptchaStatus { unReady, loading, ready }

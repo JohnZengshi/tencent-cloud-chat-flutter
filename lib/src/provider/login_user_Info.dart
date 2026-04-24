@@ -3,7 +3,7 @@
 import 'dart:math';
 
 import 'package:flutter/widgets.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/avatar_select_page.dart';
+import 'package:tencent_cloud_chat_flutter/src/avatar_select_page.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_user_full_info.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_user_full_info.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';

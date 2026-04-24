@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/custom_message/calling_message/calling_message_data_provider.dart';
+import 'package:tencent_cloud_chat_flutter/utils/custom_message/calling_message/calling_message_data_provider.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_message.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_message.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_value_callback.dart'
@@ -8,7 +8,7 @@ import 'package:tencent_cloud_chat_sdk/models/v2_tim_value_callback.dart'
 import 'package:tencent_cloud_chat_sdk/tencent_im_sdk_plugin.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/message.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/screen_utils.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/theme.dart';
 import 'package:provider/provider.dart';
 
 class RenderCustomMessage extends StatefulWidget {

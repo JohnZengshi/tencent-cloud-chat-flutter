@@ -2,9 +2,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_flutter_demo/config.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/commonUtils.dart';
+import 'package:tencent_cloud_chat_flutter/config.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter/utils/commonUtils.dart';
 import 'package:tencent_cloud_chat_sdk/manager/v2_tim_manager.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 import 'package:provider/provider.dart';

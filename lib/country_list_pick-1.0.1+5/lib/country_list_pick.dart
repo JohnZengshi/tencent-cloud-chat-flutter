@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, no_logic_in_create_state
 
 import 'package:flutter/material.dart';
-import 'package:tencent_cloud_chat_flutter_demo/country_list_pick-1.0.1+5/lib/country_selection_theme.dart';
-import 'package:tencent_cloud_chat_flutter_demo/country_list_pick-1.0.1+5/lib/selection_list.dart';
-import 'package:tencent_cloud_chat_flutter_demo/country_list_pick-1.0.1+5/lib/support/code_countries_en.dart';
-import 'package:tencent_cloud_chat_flutter_demo/country_list_pick-1.0.1+5/lib/support/code_country.dart';
-import 'package:tencent_cloud_chat_flutter_demo/country_list_pick-1.0.1+5/lib/support/code_countrys.dart';
+import 'package:tencent_cloud_chat_flutter/country_list_pick-1.0.1+5/lib/country_selection_theme.dart';
+import 'package:tencent_cloud_chat_flutter/country_list_pick-1.0.1+5/lib/selection_list.dart';
+import 'package:tencent_cloud_chat_flutter/country_list_pick-1.0.1+5/lib/support/code_countries_en.dart';
+import 'package:tencent_cloud_chat_flutter/country_list_pick-1.0.1+5/lib/support/code_country.dart';
+import 'package:tencent_cloud_chat_flutter/country_list_pick-1.0.1+5/lib/support/code_countrys.dart';
 import 'package:tencent_cloud_chat_uikit/data_services/core/tim_uikit_wide_modal_operation_key.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/screen_utils.dart';
 import 'package:tencent_cloud_chat_uikit/ui/widgets/wide_popup.dart';

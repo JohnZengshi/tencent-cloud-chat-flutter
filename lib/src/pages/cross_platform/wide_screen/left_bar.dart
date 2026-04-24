@@ -1,11 +1,11 @@
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/pages/home_page.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter/src/pages/home_page.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/pages/cross_platform/wide_screen/user_avatar.dart';
+import 'package:tencent_cloud_chat_flutter/src/pages/cross_platform/wide_screen/user_avatar.dart';
 import 'package:tencent_cloud_chat_uikit/theme/color.dart';
 
 class LeftBar extends StatefulWidget {

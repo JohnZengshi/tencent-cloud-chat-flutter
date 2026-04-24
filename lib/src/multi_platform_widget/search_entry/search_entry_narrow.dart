@@ -9,9 +9,9 @@ import 'package:tencent_cloud_chat_sdk/models/v2_tim_message.dart'
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 import 'package:tencent_cloud_chat_uikit/theme/color.dart';
 import 'package:tencent_cloud_chat_uikit/ui/controller/tim_uikit_conversation_controller.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/chat.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/search.dart';
+import 'package:tencent_cloud_chat_flutter/src/chat.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter/src/search.dart';
 
 class SearchEntryNarrow extends StatefulWidget{
   final TIMUIKitConversationController conversationController;

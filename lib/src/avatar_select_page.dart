@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/theme.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 import 'package:provider/provider.dart';
 import 'package:tencent_cloud_chat_uikit/theme/color.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/screen_utils.dart';
-import 'package:tencent_cloud_chat_flutter_demo/config.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/utils/image_url_sanitizer.dart';
+import 'package:tencent_cloud_chat_flutter/config.dart';
+import 'package:tencent_cloud_chat_flutter/src/utils/image_url_sanitizer.dart';
 
 class AvatarSelectPage extends StatefulWidget {
   static const String avatarFaceUrl = "https://im.sdk.qcloud.com/download/tuikit-resource/avatar/avatar_%s.png";

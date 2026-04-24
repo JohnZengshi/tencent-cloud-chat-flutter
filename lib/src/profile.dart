@@ -5,10 +5,10 @@ import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/about.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/my_profile_detail.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/pages/skin/skin_page.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/constant.dart';
+import 'package:tencent_cloud_chat_flutter/src/about.dart';
+import 'package:tencent_cloud_chat_flutter/src/my_profile_detail.dart';
+import 'package:tencent_cloud_chat_flutter/src/pages/skin/skin_page.dart';
+import 'package:tencent_cloud_chat_flutter/utils/constant.dart';
 import 'package:tencent_cloud_chat_sdk/manager/v2_tim_manager.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_conversation.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_conversation.dart';
@@ -17,13 +17,13 @@ import 'package:tencent_cloud_chat_sdk/models/v2_tim_friend_info.dart'
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_user_full_info.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_user_full_info.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/pages/login.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/local_setting.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/login_user_Info.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/routes.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/theme.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/toast.dart';
+import 'package:tencent_cloud_chat_flutter/src/pages/login.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/local_setting.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/login_user_Info.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter/src/routes.dart';
+import 'package:tencent_cloud_chat_flutter/utils/theme.dart';
+import 'package:tencent_cloud_chat_flutter/utils/toast.dart';
 import 'package:adaptive_action_sheet/adaptive_action_sheet.dart';
 import 'package:tencent_cloud_chat_uikit/theme/color.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/screen_utils.dart';

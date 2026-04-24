@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/tencent_page.dart';
+import 'package:tencent_cloud_chat_flutter/src/tencent_page.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_conversation.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_conversation.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_group_member_full_info.dart'
@@ -19,9 +19,9 @@ import 'package:tencent_cloud_chat_uikit/ui/utils/platform.dart';
 import 'package:tencent_cloud_chat_uikit/ui/views/TIMUIKitAddFriend/tim_uikit_send_application.dart';
 import 'package:tencent_cloud_chat_uikit/ui/views/TIMUIKitGroupProfile/group_profile_widget.dart';
 import 'package:tencent_cloud_chat_uikit/ui/views/TIMUIKitGroupProfile/widgets/tim_ui_group_profile_widget.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/chat.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/search.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/user_profile.dart';
+import 'package:tencent_cloud_chat_flutter/src/chat.dart';
+import 'package:tencent_cloud_chat_flutter/src/search.dart';
+import 'package:tencent_cloud_chat_flutter/src/user_profile.dart';
 
 class GroupProfilePage extends StatelessWidget {
   final String groupID;

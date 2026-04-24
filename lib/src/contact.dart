@@ -8,11 +8,11 @@ import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 import 'package:tencent_cloud_chat_uikit/theme/color.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/screen_utils.dart';
 import 'package:tencent_cloud_chat_uikit/ui/widgets/avatar.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/blackList.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/group_list.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/local_setting.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/user_profile.dart';
+import 'package:tencent_cloud_chat_flutter/src/blackList.dart';
+import 'package:tencent_cloud_chat_flutter/src/group_list.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/local_setting.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter/src/user_profile.dart';
 import 'package:tencent_cloud_chat_uikit/ui/widgets/wide_popup.dart';
 import 'newContact.dart';
 

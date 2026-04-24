@@ -4,9 +4,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/custom_message/calling_message/calling_message_data_provider.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/custom_message/calling_message/group_call_message_builder.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/custom_message/calling_message/single_call_message_builder.dart';
+import 'package:tencent_cloud_chat_flutter/utils/custom_message/calling_message/calling_message_data_provider.dart';
+import 'package:tencent_cloud_chat_flutter/utils/custom_message/calling_message/group_call_message_builder.dart';
+import 'package:tencent_cloud_chat_flutter/utils/custom_message/calling_message/single_call_message_builder.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_message.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_message.dart';
 import 'package:tencent_cloud_chat_uikit/theme/tui_theme.dart';
@@ -14,10 +14,10 @@ import 'package:tencent_cloud_chat_uikit/ui/controller/tim_uikit_chat_controller
 import 'package:tencent_cloud_chat_uikit/ui/utils/message.dart';
 import 'package:tencent_cloud_chat_uikit/ui/widgets/link_preview/common/extensions.dart';
 import 'package:tencent_cloud_chat_uikit/ui/widgets/link_preview/common/utils.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter/src/provider/theme.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/custom_message/link_message.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/custom_message/web_link_message.dart';
+import 'package:tencent_cloud_chat_flutter/utils/custom_message/link_message.dart';
+import 'package:tencent_cloud_chat_flutter/utils/custom_message/web_link_message.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CustomMessageElem extends StatefulWidget {

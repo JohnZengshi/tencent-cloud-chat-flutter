@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/add_friend.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/add_group.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/chat.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/create_group.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/create_group_introduction.dart';
-import 'package:tencent_cloud_chat_flutter_demo/src/search.dart';
+import 'package:tencent_cloud_chat_flutter/src/add_friend.dart';
+import 'package:tencent_cloud_chat_flutter/src/add_group.dart';
+import 'package:tencent_cloud_chat_flutter/src/chat.dart';
+import 'package:tencent_cloud_chat_flutter/src/create_group.dart';
+import 'package:tencent_cloud_chat_flutter/src/create_group_introduction.dart';
+import 'package:tencent_cloud_chat_flutter/src/search.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_conversation.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_conversation.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_message.dart'

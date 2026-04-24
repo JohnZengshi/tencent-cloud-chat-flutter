@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tencent_cloud_chat_flutter_demo/utils/custom_message/calling_message/calling_message_data_provider.dart';
+import 'package:tencent_cloud_chat_flutter/utils/custom_message/calling_message/calling_message_data_provider.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 
 class CallMessageItem extends StatelessWidget {
