@@ -413,7 +413,7 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "腾讯云 IM";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tencent Cloud Chat Flutter";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow us to use your camera to capture photos and videos sending to your friends and make video calls.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
@@ -441,10 +441,10 @@
 					"-l\"sqlite3.0\"",
 					"-l\"z\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.im.flutter.uikit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.cloud.chat.flutter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = com.tencent.im.flutter.uikit_Development_SignProvision;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = com.tencent.cloud.chat.flutter_Development_SignProvision;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -586,7 +586,7 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "i386 arm64";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "腾讯云 IM";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tencent Cloud Chat Flutter";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow us to use your camera to capture photos and videos sending to your friends and make video calls.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
@@ -614,10 +614,10 @@
 					"-l\"sqlite3.0\"",
 					"-l\"z\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.tuikit.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.cloud.chat.flutter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = imsdk;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = com.tencent.cloud.chat.flutter;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -646,7 +646,7 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "腾讯云 IM";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tencent Cloud Chat Flutter";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow us to use your camera to capture photos and videos sending to your friends and make video calls.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
@@ -674,10 +674,10 @@
 					"-l\"sqlite3.0\"",
 					"-l\"z\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.imchat.imchat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.cloud.chat.flutter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = com.imchat.imchat_Production_SignProvision;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = com.tencent.cloud.chat.flutter_Production_SignProvision;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

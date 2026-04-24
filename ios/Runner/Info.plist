@@ -21,7 +21,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>uikitflutterdemo</string>
+				<string>tencentcloudchatflutter</string>
 			</array>
 		</dict>
 	</array>
