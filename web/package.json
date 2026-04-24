@@ -1,5 +1,5 @@
 {
-  "name": "tencent-cloud-chat",
+  "name": "tencent-cloud-chat-flutter",
   "version": "1.0.0",
   "main": "main.dart.js",
   "scripts": {
@@ -11,5 +11,5 @@
     "@tencentcloud/chat": "^3.5.8",
     "tim-upload-plugin": "^1.2.0"
   },
-  "description": ""
+  "description": "Tencent Cloud Chat Flutter web package"
 }

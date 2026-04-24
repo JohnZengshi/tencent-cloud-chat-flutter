@@ -2,9 +2,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_demo/config.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_demo/utils/commonUtils.dart';
+import 'package:tencent_cloud_chat_flutter_demo/config.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/commonUtils.dart';
 import 'package:tencent_cloud_chat_sdk/manager/v2_tim_manager.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 import 'package:provider/provider.dart';
@@ -77,7 +77,7 @@ class _AboutUsState extends State<AboutUs> {
                       "https://pub.dev/publishers/comm.qq.com/packages"),
                   webViewLink("  |  "),
                   webViewLink("源代码",
-                      "https://github.com/TencentCloud/chat-demo-flutter"),
+                      "https://github.com/TencentCloud/tencent-cloud-chat-flutter-demo"),
                 ])),
                 const SizedBox(
                   height: 4,
@@ -172,7 +172,7 @@ class _AboutUsState extends State<AboutUs> {
                     return AlertDialog(
                       title: Text(TIM_t("免责声明")),
                       content: Text(TIM_t(
-                          "腾讯云IM APP（“本产品”）是由腾讯云提供的一款测试产品，腾讯云享有本产品的著作权和所有权。本产品仅用于功能体验，不得用于任何商业用途。严禁在使用中有任何色情、辱骂、暴恐、涉政等违法内容传播。")),
+                          "Tencent Cloud Chat Flutter Demo APP（“本产品”）是由腾讯云提供的一款测试产品，腾讯云享有本产品的著作权和所有权。本产品仅用于功能体验，不得用于任何商业用途。严禁在使用中有任何色情、辱骂、暴恐、涉政等违法内容传播。")),
                       actions: <Widget>[
                         TextButton(
                           child: Text(TIM_t("取消")),

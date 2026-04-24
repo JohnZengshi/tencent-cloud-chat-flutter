@@ -4,12 +4,12 @@ import 'package:adaptive_action_sheet/adaptive_action_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_demo/src/pages/cross_platform/wide_screen/about_us.dart';
-import 'package:tencent_cloud_chat_demo/src/pages/cross_platform/wide_screen/contact_us.dart';
-import 'package:tencent_cloud_chat_demo/src/pages/cross_platform/wide_screen/settings.dart';
-import 'package:tencent_cloud_chat_demo/src/routes.dart';
-import 'package:tencent_cloud_chat_demo/utils/constant.dart';
-import 'package:tencent_cloud_chat_demo/utils/toast.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/pages/cross_platform/wide_screen/about_us.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/pages/cross_platform/wide_screen/contact_us.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/pages/cross_platform/wide_screen/settings.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/routes.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/constant.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/toast.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_user_full_info.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_user_full_info.dart';
 import 'package:tencent_cloud_chat_uikit/data_services/core/tim_uikit_wide_modal_operation_key.dart';
@@ -20,8 +20,9 @@ import 'package:tencent_cloud_chat_uikit/ui/utils/screen_utils.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/time_ago.dart';
 import 'package:tencent_cloud_chat_uikit/ui/views/TIMUIKitProfile/widget/tim_uikit_profile_widget.dart';
 import 'package:tencent_cloud_chat_uikit/ui/widgets/avatar.dart';
-import 'package:tencent_cloud_chat_demo/config.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/config.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/utils/image_url_sanitizer.dart';
 import 'package:provider/provider.dart';
 import 'package:tencent_cloud_chat_uikit/ui/widgets/wide_popup.dart';
 
@@ -200,7 +201,7 @@ class MyProfileDetailState extends State<MyProfileDetail> {
                     width: 48,
                     height: 48,
                     child: Avatar(
-                        faceUrl: userProfile?.faceUrl ?? "",
+                        faceUrl: sanitizeImageUrl(userProfile?.faceUrl),
                         showName: userProfile?.nickName ?? ""),
                   ),
                 ),

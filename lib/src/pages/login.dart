@@ -11,16 +11,17 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tencent_calls_uikit/tencent_calls_uikit.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_demo/config.dart';
-import 'package:tencent_cloud_chat_demo/src/pages/home_page.dart';
-import 'package:tencent_cloud_chat_demo/src/pages/privacy/privacy_webview.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_demo/src/routes.dart';
-import 'package:tencent_cloud_chat_demo/utils/GenerateTestUserSig.dart';
-import 'package:tencent_cloud_chat_demo/utils/commonUtils.dart';
-import 'package:tencent_cloud_chat_demo/utils/toast.dart';
+import 'package:tencent_cloud_chat_flutter_demo/config.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/pages/home_page.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/pages/privacy/privacy_webview.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/routes.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/GenerateTestUserSig.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/commonUtils.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/toast.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 import 'package:tencent_cloud_chat_uikit/theme/color.dart';
+import 'package:tencent_cloud_chat_uikit/ui/utils/platform.dart';
 
 class LoginPage extends StatelessWidget {
   final Function? initIMSDK;
@@ -242,7 +243,11 @@ class _LoginFormState extends State<LoginForm> {
 
     String userSig = generateTestUserSig.genSig(identifier: userID, expire: 99999);
 
-    await TUICallKit.instance.login(sdkAppId, userID, userSig);
+    if (PlatformUtils().isMobile) {
+      await TUICallKit.instance.login(sdkAppId, userID, userSig);
+    } else {
+      print("[登录] 桌面端跳过 TUICallKit 登录");
+    }
 
     var data = await coreInstance.login(
       userID: userID,

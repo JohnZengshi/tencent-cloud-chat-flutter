@@ -1,7 +1,7 @@
 {
-  "name": "im-flutter-uikit",
+  "name": "tencent-cloud-chat-flutter-demo",
   "version": "1.0.0",
-  "description": "[English](./README_EN.md) | 简体中文 # Flutter TUIKit Demo",
+  "description": "[English](./README_EN.md) | 简体中文 # Tencent Cloud Chat Flutter Demo",
   "main": "get_all_code.js",
   "directories": {
     "lib": "lib"
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.woa.com/29294-22989-29805-29810/im-flutter-uikit.git"
+    "url": "https://git.woa.com/29294-22989-29805-29810/tencent-cloud-chat-flutter-demo.git"
   },
   "keywords": [],
   "author": "",

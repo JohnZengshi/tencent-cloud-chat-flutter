@@ -6,8 +6,8 @@ import 'package:tencent_cloud_chat_sdk/models/v2_tim_conversation.dart'
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_group_info.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_group_info.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
-import 'package:tencent_cloud_chat_demo/src/chat.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/chat.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
 import 'package:tencent_cloud_chat_uikit/theme/color.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/screen_utils.dart';
 

@@ -6,15 +6,16 @@ import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_demo/src/group_application_list.dart';
-import 'package:tencent_cloud_chat_demo/src/group_profile.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/custom_sticker_package.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/local_setting.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_demo/src/tencent_page.dart';
-import 'package:tencent_cloud_chat_demo/src/user_profile.dart';
-import 'package:tencent_cloud_chat_demo/utils/custom_message/calling_message/calling_message_data_provider.dart';
-import 'package:tencent_cloud_chat_demo/utils/custom_message/custom_message_element.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/group_application_list.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/group_profile.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/custom_sticker_package.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/local_setting.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/tencent_page.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/user_profile.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/utils/image_url_sanitizer.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/custom_message/calling_message/calling_message_data_provider.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/custom_message/custom_message_element.dart';
 import 'package:tencent_cloud_chat_sdk/enum/group_type.dart';
 import 'package:tencent_cloud_chat_sdk/manager/v2_tim_manager.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_conversation.dart'
@@ -329,7 +330,7 @@ class _ChatState extends State<Chat> {
               } else {
                 userFullInfo = V2TimUserFullInfo(
                     userID: widget.selectedConversation.userID,
-                    faceUrl: widget.selectedConversation.faceUrl,
+                    faceUrl: sanitizeImageUrl(widget.selectedConversation.faceUrl),
                     nickName: widget.selectedConversation.showName);
               }
 

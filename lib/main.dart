@@ -11,14 +11,14 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:tencent_calls_uikit/tencent_calls_uikit.dart';
 import 'package:tencent_chat_i18n_tool/language_json/strings.g.dart';
-import 'package:tencent_cloud_chat_demo/custom_animation.dart';
-import 'package:tencent_cloud_chat_demo/config.dart';
-import 'package:tencent_cloud_chat_demo/src/pages/app.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/custom_sticker_package.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/local_setting.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/login_user_Info.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/user_guide_provider.dart';
+import 'package:tencent_cloud_chat_flutter_demo/custom_animation.dart';
+import 'package:tencent_cloud_chat_flutter_demo/config.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/pages/app.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/custom_sticker_package.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/local_setting.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/login_user_Info.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/user_guide_provider.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 import 'package:tencent_cloud_chat_uikit/theme/color.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/platform.dart';
@@ -87,7 +87,7 @@ class TUIKitDemoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Provider.of<DefaultThemeData>(context).theme;
     return MaterialApp(
-      title: 'Tencent Cloud Chat - 腾讯云IM - Flutter',
+      title: 'Tencent Cloud Chat Flutter Demo Flutter Demo Flutter Demo',
       debugShowCheckedModeBanner: false,
       locale: TranslationProvider.of(context).flutterLocale, // use provider
       supportedLocales: LocaleSettings.supportedLocales,

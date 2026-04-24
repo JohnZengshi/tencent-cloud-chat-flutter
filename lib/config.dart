@@ -3,8 +3,8 @@ import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
 enum WebUrl { personalInfo, thirdPartyInfo }
 
 class IMDemoConfig {
-  static const int sdkAppID = 0;
-  static const String key = "";
+  static const int sdkAppID = 20034637;
+  static const String key = "435ff55cc0c6416265694c418ce2075d409d99736e026cb795a45e06ae62963d";
   static const String appVersion = String.fromEnvironment('APP_VERSION', defaultValue: "0.0.1");
   static const String projectType = String.fromEnvironment('PROJECT_TYPE', defaultValue: "discord");
   static const bool productEnv = bool.fromEnvironment('ISPRODUCT_ENV', defaultValue: false);

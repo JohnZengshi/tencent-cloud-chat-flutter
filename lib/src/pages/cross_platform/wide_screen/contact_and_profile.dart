@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_demo/src/contact.dart';
-import 'package:tencent_cloud_chat_demo/src/group_list.dart';
-import 'package:tencent_cloud_chat_demo/src/multi_platform_widget/search_entry/search_entry.dart';
-import 'package:tencent_cloud_chat_demo/src/multi_platform_widget/search_entry/search_entry_wide.dart';
-import 'package:tencent_cloud_chat_demo/src/pages/cross_platform/wide_screen/empty_widget.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_demo/src/search.dart';
-import 'package:tencent_cloud_chat_demo/src/user_profile.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/contact.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/group_list.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/multi_platform_widget/search_entry/search_entry.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/multi_platform_widget/search_entry/search_entry_wide.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/pages/cross_platform/wide_screen/empty_widget.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/search.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/user_profile.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_conversation.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/web/compatible_models/v2_tim_conversation.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_group_info.dart'
@@ -67,7 +67,7 @@ class _ContactsAndProfileState extends State<ContactsAndProfile> {
                   },
                 )
               : DefaultTabController(
-                  length: 3,
+                  length: 2,
                   child: Container(
                     color: theme.wideBackgroundColor,
                     child: Column(
@@ -144,15 +144,6 @@ class _ContactsAndProfileState extends State<ContactsAndProfile> {
                               ),
                               Container(
                                 child: Text(TIM_t("群组")),
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 10),
-                                margin: const EdgeInsets.only(bottom: 6),
-                              ),
-                              // if (TencentCloudChatCustomerServicePlugin.hasInited) {
-                              //   return;
-                              // }
-                              Container(
-                                child: Text(TIM_t("在线客服")),
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
                                 margin: const EdgeInsets.only(bottom: 6),

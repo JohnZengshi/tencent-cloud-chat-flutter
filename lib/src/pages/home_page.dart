@@ -6,19 +6,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
 import 'package:tencent_calls_uikit/tencent_calls_uikit.dart';
-import 'package:tencent_cloud_chat_demo/src/add_friend.dart';
-import 'package:tencent_cloud_chat_demo/src/add_group.dart';
-import 'package:tencent_cloud_chat_demo/src/chat.dart';
-import 'package:tencent_cloud_chat_demo/config.dart';
-import 'package:tencent_cloud_chat_demo/src/contact.dart';
-import 'package:tencent_cloud_chat_demo/src/conversation.dart';
-import 'package:tencent_cloud_chat_demo/src/create_group.dart';
-import 'package:tencent_cloud_chat_demo/src/create_group_introduction.dart';
-import 'package:tencent_cloud_chat_demo/src/profile.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/local_setting.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/login_user_Info.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_demo/src/tencent_page.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/add_friend.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/add_group.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/chat.dart';
+import 'package:tencent_cloud_chat_flutter_demo/config.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/contact.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/conversation.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/create_group.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/create_group_introduction.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/profile.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/local_setting.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/login_user_Info.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/tencent_page.dart';
 import 'package:tencent_cloud_chat_push/tencent_cloud_chat_push.dart';
 import 'package:tencent_cloud_chat_sdk/manager/v2_tim_manager.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_conversation.dart'
@@ -93,6 +93,10 @@ class HomePageState extends State<HomePage> {
   }
 
   _initCallKit() async {
+    if (!PlatformUtils().isMobile) {
+      print("[首页] 桌面端跳过 TUICallKit 初始化");
+      return;
+    }
     final TUICallKit _callKit = TUICallKit.instance;
     _callKit.enableFloatWindow(true);
   }

@@ -8,9 +8,9 @@ The platforms are compatible with the deployment of our Chat UIKit.
 - Windows (version 2.0.0 and later)
 - macOS (version 2.0.0 and later)
 
-## Check Out Our Sample Apps
+## Tencent Cloud Chat Flutter
 
-This document introduces how to quickly run the Chat demo on the iOS platform.
+This document introduces how to quickly run Tencent Cloud Chat Flutter on the iOS platform.
 For the other platforms, please refer to document：
 - [**chat-uikit-android**](https://github.com/TencentCloud/chat-uikit-android)
 - [**chat-uikit-ios**](https://github.com/TencentCloud/chat-uikit-ios)
@@ -125,7 +125,7 @@ After the app is created, an app ID (SDKAppID) will be automatically generated, 
 
 ```shell
 # Clone the code
-git clone https://github.com/TencentCloud/chat-demo-flutter.git
+git clone https://github.com/TencentCloud/tencent-cloud-chat-flutter.git
 
 # Flutter clean
 flutter clean

@@ -1,5 +1,5 @@
-name: tencent_cloud_chat_demo
-description: The sample app of Tencent Cloud Chat Flutter integration. Includes two different interface for variety width that runs on iOS/Android/macOS/Windows/Web/H5 platform. This app is mainly build with our Flutter Chat TUIKit, which can adaptively display and business logic according to the type of platform and screen width.
+name: tencent_cloud_chat_flutter
+description: Tencent Cloud Chat Flutter is a cross-platform instant messaging app built with Tencent Cloud Chat TUIKit. It supports iOS, Android, macOS, Windows, Web, and H5 with adaptive layouts for different screen sizes.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -33,7 +33,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  # Tencent Cloud Chat dependencies:
+  # Tencent Cloud Chat Flutter dependencies:
   tencent_cloud_chat_uikit: ^5.0.1
   tencent_calls_uikit: ^2.9.1
   tencent_cloud_chat_push: ^8.7.7201
@@ -52,6 +52,9 @@ dependencies:
   dio: ^4.0.0
 
 dependency_overrides:
+  tencent_cloud_chat_uikit:
+    path: vendor/tencent_cloud_chat_uikit
+
   # Flutter 3.32.4 requires the use of intl: ^0.20.2 version, which is also available in Flutter 3.29.x version
   intl: ^0.20.2
 

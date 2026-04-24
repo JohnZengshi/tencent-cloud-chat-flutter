@@ -4,18 +4,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
-import 'package:tencent_cloud_chat_demo/utils/constant.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/constant.dart';
 import 'package:tencent_cloud_chat_uikit/business_logic/view_models/tui_self_info_view_model.dart';
 import 'package:tencent_cloud_chat_uikit/data_services/services_locatar.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 import 'package:tencent_cloud_chat_uikit/theme/color.dart';
 import 'package:tencent_cloud_chat_uikit/ui/widgets/avatar.dart';
-import 'package:tencent_cloud_chat_demo/src/pages/login.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/pages/login.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/utils/image_url_sanitizer.dart';
 import 'package:provider/provider.dart';
-import 'package:tencent_cloud_chat_demo/src/routes.dart';
-import 'package:tencent_cloud_chat_demo/utils/request.dart';
-import 'package:tencent_cloud_chat_demo/utils/toast.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/routes.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/request.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/toast.dart';
 import '../config.dart';
 import 'package:dio/dio.dart';
 
@@ -134,7 +135,7 @@ class CancelAccount extends StatelessWidget {
                     child: Avatar(
                       borderRadius: BorderRadius.circular(40),
                         showName: _selfInfoViewModel.loginInfo?.userID ?? "",
-                        faceUrl: _selfInfoViewModel.loginInfo?.faceUrl ?? ""),
+                        faceUrl: sanitizeImageUrl(_selfInfoViewModel.loginInfo?.faceUrl)),
                   ),
                   Positioned(
                     right: -10,

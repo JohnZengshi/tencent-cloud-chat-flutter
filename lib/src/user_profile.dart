@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tencent_chat_i18n_tool/tencent_chat_i18n_tool.dart';
 import 'package:tencent_calls_uikit/tencent_calls_uikit.dart';
-import 'package:tencent_cloud_chat_demo/src/chat.dart';
-import 'package:tencent_cloud_chat_demo/src/provider/theme.dart';
-import 'package:tencent_cloud_chat_demo/src/search.dart';
-import 'package:tencent_cloud_chat_demo/src/tencent_page.dart';
-import 'package:tencent_cloud_chat_demo/utils/commonUtils.dart';
-import 'package:tencent_cloud_chat_demo/utils/toast.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/chat.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/provider/theme.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/search.dart';
+import 'package:tencent_cloud_chat_flutter_demo/src/tencent_page.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/commonUtils.dart';
+import 'package:tencent_cloud_chat_flutter_demo/utils/toast.dart';
 import 'package:tencent_cloud_chat_sdk/enum/offlinePushInfo.dart';
 import 'package:tencent_cloud_chat_sdk/manager/v2_tim_manager.dart';
 import 'package:tencent_cloud_chat_sdk/models/v2_tim_conversation.dart'
@@ -153,7 +153,11 @@ class UserProfileState extends State<UserProfile> {
   }
 
   _initTUICalling() async {
-    _calling = TUICallKit.instance;
+    if (PlatformUtils().isMobile) {
+      _calling = TUICallKit.instance;
+    } else {
+      print("[用户资料] 桌面端跳过 TUICallKit 初始化");
+    }
   }
 
   @override
