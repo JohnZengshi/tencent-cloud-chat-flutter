@@ -80,37 +80,69 @@ class HomePageWideScreenState extends State<HomePageWideScreen> {
           ),
         ),
         Expanded(
-            child: Column(
-              children: [
-                if(PlatformUtils().isWindows) Container(
-                  height: 40,
-                  decoration: BoxDecoration(
-                      color: hexToColor("3f4c68")),
-                child: Row(
-                  children: [
-                    Expanded(child: MoveWindow()),
-                    MinimizeWindowButton(colors: WindowButtonColors(
-                      iconNormal: Colors.white
-                    ),),
-                    MaximizeWindowButton(colors: WindowButtonColors(
-                        iconNormal: Colors.white
-                    ),),
-                    CloseWindowButton(colors: WindowButtonColors(
-                        iconNormal: Colors.white
-                    ),)
-                  ],
-                ),),
-                Expanded(child: IndexedStack(
-                  index: homePageIndex,
-                  children: [
-                    ConversationAndChat(conversation: currentConversation,),
-                    ContactsAndProfile(onNavigateToChat: _navigateToChat),
-                    const MeAndTencent(),
-                  ],
-                ))
-              ],
-            )
-        )
+            child: LayoutBuilder(builder: (context, constraints) {
+          final isWindows = PlatformUtils().isWindows;
+          final double titleBarHeight = isWindows
+              ? constraints.maxHeight.clamp(0.0, 40.0)
+              : 0;
+
+          return Column(
+            children: [
+              if (isWindows && titleBarHeight > 0)
+                SizedBox(
+                  height: titleBarHeight,
+                  child: Container(
+                    decoration: BoxDecoration(color: hexToColor("3f4c68")),
+                    child: LayoutBuilder(builder: (context, titleBarConstraints) {
+                      final bool compactButtons =
+                          titleBarConstraints.maxWidth < 140 ||
+                              titleBarConstraints.maxHeight < 40;
+
+                      return Row(
+                        children: [
+                          Expanded(child: MoveWindow()),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            alignment: Alignment.centerRight,
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                MinimizeWindowButton(
+                                  colors: WindowButtonColors(
+                                      iconNormal: Colors.white),
+                                ),
+                                if (!compactButtons ||
+                                    titleBarConstraints.maxWidth >= 96)
+                                  MaximizeWindowButton(
+                                    colors: WindowButtonColors(
+                                        iconNormal: Colors.white),
+                                  ),
+                                CloseWindowButton(
+                                  colors: WindowButtonColors(
+                                      iconNormal: Colors.white),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      );
+                    }),
+                  ),
+                ),
+              Expanded(
+                  child: IndexedStack(
+                index: homePageIndex,
+                children: [
+                  ConversationAndChat(
+                    conversation: currentConversation,
+                  ),
+                  ContactsAndProfile(onNavigateToChat: _navigateToChat),
+                  const MeAndTencent(),
+                ],
+              ))
+            ],
+          );
+        }))
       ],
     );
   }

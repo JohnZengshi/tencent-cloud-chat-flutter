@@ -28,6 +28,7 @@ class TUIProfileViewModel extends ChangeNotifier {
   final TUIFriendShipViewModel _friendShipViewModel = serviceLocator<TUIFriendShipViewModel>();
   final CoreServicesImpl _coreServices = serviceLocator<CoreServicesImpl>();
   final MessageService _messageService = serviceLocator<MessageService>();
+  bool _isDisposed = false;
 
   UserProfile? _userProfile;
   ProfileLifeCycle? _lifeCycle;
@@ -58,6 +59,20 @@ class TUIProfileViewModel extends ChangeNotifier {
 
   set lifeCycle(ProfileLifeCycle? value) {
     _lifeCycle = value;
+  }
+
+  @override
+  void notifyListeners() {
+    if (_isDisposed) {
+      return;
+    }
+    super.notifyListeners();
+  }
+
+  @override
+  void dispose() {
+    _isDisposed = true;
+    super.dispose();
   }
 
   loadData({required String userID, bool isNeedConversation = true}) async {

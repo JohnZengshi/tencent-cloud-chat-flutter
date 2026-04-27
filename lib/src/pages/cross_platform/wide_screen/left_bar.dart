@@ -144,10 +144,18 @@ class _LeftBarState extends State<LeftBar> {
   }
 
   List<Widget> bottomNavigatorList(theme) {
+    return bottomNavigatorListWithStyle(theme);
+  }
+
+  List<Widget> bottomNavigatorListWithStyle(
+    theme, {
+    double itemExtent = 60,
+    bool showLabel = true,
+  }) {
     return getBottomNavigatorList(theme).map((e) {
       return Container(
-        width: 60,
-        height: 60,
+        width: itemExtent,
+        height: itemExtent,
         decoration: BoxDecoration(
           color: widget.index == e.index ? hexToColor("273044") : null,
           borderRadius: BorderRadius.circular(8.0),
@@ -167,14 +175,15 @@ class _LeftBarState extends State<LeftBar> {
                       ? e.selectedIcon
                       : e.unselectedIcon,
                 ),
-                const SizedBox(height: 4),
-                Text(
-                  e.title,
-                  style: TextStyle(
-                    color: hexToColor("d9dbe2"),
-                    fontSize: 10,
-                  ),
-                )
+                if (showLabel) const SizedBox(height: 4),
+                if (showLabel)
+                  Text(
+                    e.title,
+                    style: TextStyle(
+                      color: hexToColor("d9dbe2"),
+                      fontSize: 10,
+                    ),
+                  )
               ],
             ),
           ),
@@ -186,28 +195,80 @@ class _LeftBarState extends State<LeftBar> {
   @override
   Widget build(BuildContext context) {
     final theme = Provider.of<DefaultThemeData>(context).theme;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        SizedBox(
-          height: 40,
-          child: MoveWindow(
-            child: Container(),
+    return LayoutBuilder(builder: (context, constraints) {
+      final double maxHeight = constraints.maxHeight;
+      final bool compactLayout = maxHeight < 320;
+      final bool hideLabels = maxHeight < 240;
+      final double topHeight = compactLayout
+          ? maxHeight.clamp(12.0, 40.0)
+          : 40;
+      final double itemExtent = hideLabels
+          ? 44
+          : compactLayout
+              ? 52
+              : 60;
+
+      if (!compactLayout) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: topHeight,
+              child: MoveWindow(
+                child: Container(),
+              ),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: bottomNavigatorList(theme),
+            ),
+            Expanded(
+                child: MoveWindow(
+              child: Container(),
+            )),
+            UserAvatar(
+              onChangeIndex: widget.onChange,
+            ),
+          ],
+        );
+      }
+
+      return SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: maxHeight),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: topHeight,
+                child: MoveWindow(
+                  child: Container(),
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: bottomNavigatorListWithStyle(
+                  theme,
+                  itemExtent: itemExtent,
+                  showLabel: !hideLabels,
+                ),
+              ),
+              SizedBox(height: hideLabels ? 8 : 12),
+              SizedBox(
+                height: hideLabels ? 52 : 72,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.topCenter,
+                  child: UserAvatar(
+                    onChangeIndex: widget.onChange,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: bottomNavigatorList(theme),
-        ),
-        Expanded(
-            child: MoveWindow(
-          child: Container(),
-        )),
-        UserAvatar(
-          onChangeIndex: widget.onChange,
-        ),
-      ],
-    );
+      );
+    });
   }
 }
